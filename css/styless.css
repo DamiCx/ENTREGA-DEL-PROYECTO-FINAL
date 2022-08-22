@@ -1,0 +1,288 @@
+@font-face {
+  font-family: "Bebas-Regular";
+  src: url("../assets/fonts/Bebas-Regular.otf"); }
+
+/*Aplicando un mapa*/
+h1 {
+  font-family: "Bebas-Regular"; }
+
+h2 {
+  font-family: "Bebas-Regular";
+  font-style: italic; }
+
+a {
+  font-family: 'Permanent Marker', cursive; }
+
+.row {
+  margin: 0; }
+
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 12vh; }
+
+.colorSvg, .h5ColorBlanco, .pColorBlanco {
+  color: antiquewhite; }
+
+/*Aplicando un mapa*/
+.navBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+nav ul {
+  display: flex; }
+
+nav li a:hover {
+  background: brown; }
+
+li {
+  list-style-type: none;
+  padding: 10px; }
+
+.navbar-brand {
+  margin-right: -18rem; }
+
+/*Aplicando un mapa*/
+@keyframes desplazar {
+  from {
+    margin-left: 100%;
+    width: 300%; }
+  to {
+    margin-left: 18%;
+    width: 100%; } }
+
+.animacion {
+  animation-duration: 1s;
+  animation-name: desplazar; }
+
+.cardEffect:hover {
+  border: 1px solid brown;
+  box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+  z-index: 500; }
+
+.animacionCard:hover {
+  transition: all 0.10s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  border: 1px solid #cccccc;
+  background-color: white; }
+
+.degradado {
+  background-image: linear-gradient(to bottom, #17a2b8, #000000); }
+
+.btn-primary, .btn-primary:hover {
+  border-color: brown; }
+
+body {
+  background-color: #494949; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: antiquewhite;
+  margin-top: 20px; }
+
+.list-unstyled {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.text-uppercase {
+  display: flex;
+  justify-content: center; }
+
+/*Aplicando un mapa*/
+.formularioContacto {
+  width: 460px;
+  height: auto;
+  margin: 15px auto;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: white;
+  padding-left: 30px; }
+
+.estiloInputTextArea, input, textarea {
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: brown;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px; }
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding-top: 15px; }
+
+label {
+  display: block;
+  float: center; }
+
+button p {
+  color: #fff; }
+
+span {
+  color: brown; }
+
+.aviso {
+  font-size: 13px;
+  color: #0e0e0e; }
+
+.tituloFormulario {
+  font-size: 39px;
+  padding-bottom: 20px;
+  color: brown;
+  margin: 10px; }
+
+.subtituloFormulario {
+  font-size: 10px;
+  padding-bottom: 30px;
+  color: #0e0e0e; }
+
+p {
+  font-size: 14px;
+  color: #0e0e0e; }
+
+::-webkit-input-placeholder {
+  color: #a8a8a8; }
+
+::-webkit-textarea-placeholder {
+  color: #a8a8a8; }
+
+/*Creando un mixin*/
+.formulario input:focus {
+  outline: 0;
+  border: 1px solid #97d848; }
+
+.formulario textarea:focus {
+  outline: 0;
+  border: 1px solid #97d848; }
+
+.wrapperMobile {
+  overflow-x: hidden; }
+
+/* UBICACION.HTML con GRID*/
+/*VISTA MOBILE*/
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .contenedorPadre {
+    display: grid;
+    grid-template-areas: "header"
+ "nav"
+ "titulo"
+ "ubicacion"
+ "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 360px 100px 350px 550px;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    padding: 10px; }
+  header {
+    grid-area: header; }
+  .navBarGrid {
+    grid-area: nav; }
+  .divGrid {
+    grid-area: titulo; }
+  .sectionGrid {
+    grid-area: ubicacion; }
+  .footerGrid {
+    grid-area: footer; }
+  .mapa {
+    height: 100%;
+    width: 100%; }
+  .navBarGrid {
+    flex-direction: column;
+    align-items: center; }
+  .navBarGrid ul {
+    flex-direction: column; } }
+
+/*VISTA DESKTOP*/
+@media only screen and (min-width: 1024px) {
+  .contenedorPadre {
+    display: grid;
+    grid-template-areas: "header nav nav"
+ "titulo titulo titulo"
+ "ubicacion ubicacion ubicacion"
+ "footer footer footer";
+    grid-template-rows: 100px 80px 600px 250px;
+    grid-template-columns: 20% 40% 40%;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    padding: 10px; }
+  header {
+    grid-area: header; }
+  .navBarGrid {
+    grid-area: nav; }
+  .divGrid {
+    grid-area: titulo; }
+  .sectionGrid {
+    grid-area: ubicacion; }
+  .footerGrid {
+    grid-area: footer; } }
+
+.headerGrid {
+  display: flex;
+  justify-content: center;
+  background-color: #343a40;
+  box-shadow: 0 -1px 30px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.1); }
+
+.navBarGrid {
+  display: flex;
+  justify-content: space-between;
+  background-color: #343a40;
+  box-shadow: 0 -1px 30px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.1); }
+
+.navBarGrid ul {
+  list-style: none;
+  padding: 0;
+  display: flex; }
+
+.navBarGrid li a {
+  color: #d1d2d3;
+  display: inline-block;
+  text-decoration: none;
+  padding: .5em 1em; }
+
+.navbar-brand {
+  margin: 0;
+  padding-top: 10px; }
+
+.sectionGrid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 -1px 30px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px; }
+
+.footerGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: brown;
+  box-shadow: 0 -1px 30px 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: antiquewhite; }
+
+.divGrid {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem; }
+
+.dUbicacion {
+  display: flex;
+  justify-content: center; }
+
+h5 {
+  font-family: Tahoma, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0px; }
